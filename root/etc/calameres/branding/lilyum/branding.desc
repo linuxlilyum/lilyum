@@ -19,14 +19,14 @@ strings:
 welcomeExpandingLogo:   true
 
 images:
-    productLogo:         "000.png"
-    productIcon:         "000.png"
+    productLogo:         "0004.png"
+    productIcon:         "0004.png"
     productWelcome:      "selam.png"
 
 slideshow:               "show.qml"
 
 style:
-   sidebarBackground:    rgba(0,0,0,0.5)
+   sidebarBackground:    "#292929"
    sidebarText:          "#c0c0c0"
-   sidebarTextSelect:    "#392F34"
-   sidebarTextHighlight: "#c35400"
+   sidebarTextSelect:    "#FFFFFF"
+   sidebarTextHighlight: "#292929"
