@@ -1,11 +1,11 @@
-#Lilyum nedir?
+**Lilyum nedir?**
 
 Lilyum, içeriğinde çeşitli özelleştirmelerin bulunduğu bir openSUSE çatalamasıdır. 
 OpenSUSE'ye kıyasla daha şık, daha kullanışlı ve daha hızlıdır. 
 Kurulumu nispeten daha kolaydır, öncedelen yapılandırıldığı için kurulum sonrası fazla iş istemez. 
 KDE masaüstü ortamı ile kurulumştur. 
 
-#Bu sayfadaki dosyalar neye yarar?
+**Bu sayfadaki dosyalar neye yarar?**
 
 Bu sayfadaki dosyalar Lilyum'u Kiwi aracılığıyla sıfırdan derlemenizi sağlar.
 Derleme işlemi sisteminizin gücüne göre bir saat ila dört saat arasında gerçekleşebilir. 
@@ -13,12 +13,12 @@ Root, sistemin içeriğinde bulunan pek çok dosyayı barındırır.
 Config.xml, sistem hakkında pek çok veriyi ve paketi barındırır. 
 Config.sh, sistem derlenirken çalıştırılan komutları barındırır.
 
-#Nasıl derleyebilirim?
+**Nasıl derleyebilirim?**
 OpenSUSE sisteminize "python3-kiwi" paketini kurunuz. (Fedora ve CentOS için: https://software.opensuse.org/package/python-kiwi)
 Bu sayfaları dosyaları "Lilyum" isimli bir dizine ekleyin ve bu dizinin olduğu üst dizinde "cikti" isimli boş bir klasör daha oluşturun.
 Ardından şu komutu "Lilyum" ve "cikti" isimli dizinlerin olduğu dizinde çalıştırınız:
 "LANG=C sudo kiwi-ng --type iso system build --description lilyum --target-dir cikti"
 İşlem bittikten sonra "cikti" isimli dizinde bir ISO dosyası göreceksiniz. 
 
-#Peki, kullanmak için illa ki derlemem mi gerekiyor?
+**Peki, kullanmak için illa ki derlemem mi gerekiyor?**
 Elbette ki gerekmiyor. Yakın bir zamanda imaj dosyasını uygun bir adrese yükleyeceğim. 
