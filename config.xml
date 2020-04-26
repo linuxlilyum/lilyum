@@ -9,7 +9,7 @@
         </specification>
     </description>
     <preferences>
-        <type image="iso" primary="true" flags="overlay" hybrid="true" firmware="efi" kernelcmdline="splash" hybridpersistent_filesystem="ext4" hybridpersistent="true" mediacheck="true"/>
+        <type image="iso" primary="true" flags="overlay" hybrid="true" firmware="efi" kernelcmdline="silent" hybridpersistent_filesystem="ext4" hybridpersistent="true" mediacheck="true"/>
         <version>0.55</version>
         <packagemanager>zypper</packagemanager>
         <locale>en_US</locale>
@@ -21,8 +21,8 @@
         <bootloader-theme>Lilyum</bootloader-theme>
     </preferences>
     <preferences>
-        <type image="vmx" filesystem="ext4" bootloader="grub2" kernelcmdline="splash" firmware="efi"/>
-        <type image="oem" filesystem="ext4" initrd_system="dracut" installiso="true" bootloader="grub2" kernelcmdline="splash" firmware="efi">
+        <type image="vmx" filesystem="ext4" bootloader="grub2" kernelcmdline="silent" firmware="efi"/>
+        <type image="oem" filesystem="ext4" initrd_system="dracut" installiso="true" bootloader="grub2" kernelcmdline="silent" firmware="efi">
             <oemconfig>
                 <oem-systemsize>2048</oem-systemsize>
                 <oem-swap>true</oem-swap>
@@ -136,6 +136,7 @@
      <package name='libva-x11-2'/>
      <package name='libva-drm2'/>
      <package name='libva-wayland2'/>
+     <package name='libva-intel-driver'/>
      <package name='libqt5-qtstyleplugins-platformtheme-gtk2'/>
      <package name='libqt5-qtbase-platformtheme-gtk3'/>
      <package name='patterns-openSUSE-minimal_base'/>
@@ -143,7 +144,6 @@
      <package name='patterns-yast-x11_yast'/>
      <package name='patterns-openSUSE-sw_management_gnome'/>
      <package name='patterns-openSUSE-gnome_yast'/>
-     <package name='patterns-openSUSE-apparmor'/>
      <package name='patterns-openSUSE-enhanced_base'/>
      <package name='patterns-openSUSE-enhanced_base_opt'/>
      <package name='patterns-openSUSE-x11_opt'/>
@@ -406,5 +406,6 @@
      <package name='libQt5DBus-devel'/>
      <package name='libqt5-qtx11extras-devel'/>
      <package name='fftw3-devel'/>
+     <package name='shim'/>
     </packages>
 </image>
