@@ -1,0 +1,32 @@
+---
+componentName:  fancy
+
+welcomeStyleCalamares:   false
+
+strings:
+    productName:         Linux Lilyum
+    shortProductName:    Lilyum
+    version:             0.55 Test
+    shortVersion:        0.55 T
+    versionedName:       Linux Lilyum 0.55 Test Sürümü
+    shortVersionedName:  Lilyum 0.55
+    bootloaderEntryName: Lilyum
+    productUrl:          https://calamares.io/
+    supportUrl:          https://github.com/calamares/calamares/issues
+    knownIssuesUrl:      https://calamares.io/about/
+    releaseNotesUrl:     https://calamares.io/about/
+
+welcomeExpandingLogo:   true
+
+images:
+    productLogo:         "0004.png"
+    productIcon:         "0004.png"
+    productWelcome:      "selam.png"
+
+slideshow:               "show.qml"
+
+style:
+   sidebarBackground:    "#292929"
+   sidebarText:          "#c0c0c0"
+   sidebarTextSelect:    "#FFFFFF"
+   sidebarTextHighlight: "#292929"
