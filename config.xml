@@ -9,8 +9,8 @@
         </specification>
     </description>
     <preferences>
-        <type image="iso" primary="true" flags="overlay" hybrid="true" firmware="efi" kernelcmdline="silent" hybridpersistent_filesystem="ext4" hybridpersistent="true" mediacheck="true"/>
-        <version>0.55</version>
+        <type image="iso" primary="true" flags="overlay" hybrid="true" firmware="uefi" kernelcmdline="silent" hybridpersistent_filesystem="ext4" hybridpersistent="true" mediacheck="true"/>
+        <version>0.55.Test</version>
         <packagemanager>zypper</packagemanager>
         <locale>en_US</locale>
         <keytable>us.map.gz</keytable>
@@ -21,8 +21,8 @@
         <bootloader-theme>Lilyum</bootloader-theme>
     </preferences>
     <preferences>
-        <type image="vmx" filesystem="ext4" bootloader="grub2" kernelcmdline="silent" firmware="efi"/>
-        <type image="oem" filesystem="ext4" initrd_system="dracut" installiso="true" bootloader="grub2" kernelcmdline="silent" firmware="efi">
+        <type image="vmx" filesystem="ext4" bootloader="grub2" kernelcmdline="silent" firmware="uefi"/>
+        <type image="oem" filesystem="ext4" initrd_system="dracut" installiso="true" bootloader="grub2" kernelcmdline="silent" firmware="uefi">
             <oemconfig>
                 <oem-systemsize>2048</oem-systemsize>
                 <oem-swap>true</oem-swap>
