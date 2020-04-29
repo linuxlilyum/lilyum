@@ -39,40 +39,35 @@
         <user password="" home="/root" name="root" groups="root"/>
     </users>
     <repository type="rpm-md" alias="kiwi" priority="1">
-        <source path="obs://Virtualization:Appliances:Builder/openSUSE_Leap_15.1"/>
+        <source path="obs://Virtualization:Appliances:Builder/openSUSE_Leap_15.2"/>
     </repository>
-    <repository type='rpm-md' alias="Kernel" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="89">
-     <source path='http://download.opensuse.org/repositories/Kernel:/openSUSE-15.1/standard/'/>
-    </repository>
-    <repository type='rpm-md' alias="Nvidia" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="89">
-      <source path='https://download.nvidia.com/opensuse/leap/15.1'/>
     </repository>
     <repository type='rpm-md' alias="Packman" imageinclude="true" priority="90">
-      <source path='http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_15.1/'/>
+      <source path='http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_15.2/'/>
     </repository>
     <repository type='rpm-md' alias="Wine" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="91">
-      <source path='https://download.opensuse.org/repositories/Emulators:/Wine/openSUSE_Leap_15.1/'/>
+      <source path='https://download.opensuse.org/repositories/Emulators:/Wine/openSUSE_Leap_15.2/'/>
     </repository>
     <repository type='rpm-md' alias="kdeextra" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="91">
-      <source path='http://download.opensuse.org/repositories/KDE:/Extra/openSUSE_Leap_15.1/'/>
+      <source path='http://download.opensuse.org/repositories/KDE:/Extra/openSUSE_Leap_15.2/'/>
     </repository>
     <repository type='rpm-md' alias="YaST:Head" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="91">
-      <source path='http://download.opensuse.org/repositories/YaST:/Head/openSUSE_Leap_15.1/'/>
+      <source path='http://download.opensuse.org/repositories/YaST:/Head/openSUSE_Leap_15.2/'/>
     </repository>
     <repository type='rpm-md' alias="GamesTools" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="92">
-      <source path='http://download.opensuse.org/repositories/games/openSUSE_Leap_15.1/'/>
+      <source path='http://download.opensuse.org/repositories/games/openSUSE_Leap_15.2/'/>
     </repository>
-   <repository type='rpm-md' alias="Leap-15.1_OSS_updates" imageinclude="true" priority="97">
-    <source path='http://download.opensuse.org/update/leap/15.1/oss/'/>
+   <repository type='rpm-md' alias="Leap-15.2_OSS_updates" imageinclude="true" priority="97">
+    <source path='http://download.opensuse.org/update/leap/15.2/oss/'/>
    </repository>
-   <repository type='rpm-md' alias="Leap-15.1_non-OSS_updates" imageinclude="true" priority="97">
-    <source path='http://download.opensuse.org/update/leap/15.1/non-oss/'/>
+   <repository type='rpm-md' alias="Leap-15.2_non-OSS_updates" imageinclude="true" priority="97">
+    <source path='http://download.opensuse.org/update/leap/15.2/non-oss/'/>
    </repository>
-   <repository type='rpm-md' alias="Leap-15.1_OSS" imageinclude="true" priority="98">
-    <source path='http://download.opensuse.org/distribution/leap/15.1/repo/oss/'/>
+   <repository type='rpm-md' alias="Leap-15.2_OSS" imageinclude="true" priority="98">
+    <source path='http://download.opensuse.org/distribution/leap/15.2/repo/oss/'/>
    </repository>
-   <repository type='yast2' alias="Leap-15.1_non-OSS" imageinclude="true" priority="98">
-    <source path='http://download.opensuse.org/distribution/leap/15.1/repo/non-oss/'/>
+   <repository type='yast2' alias="Leap-15.2_non-OSS" imageinclude="true" priority="98">
+    <source path='http://download.opensuse.org/distribution/leap/15.2/repo/non-oss/'/>
    </repository>
    <repository type='rpm-md' alias="Google_Chrome" imageinclude="true" priority="99">
     <source path='http://dl.google.com/linux/chrome/rpm/stable/x86_64'/>
@@ -81,7 +76,6 @@
     <packages type="image">
         <package name="checkmedia"/>
         <package name="patterns-openSUSE-base"/>
-        <package name="grub2-branding-openSUSE"/>
         <package name="ifplugd"/>
         <package name="iputils"/>
         <package name="vim"/>
@@ -287,7 +281,6 @@
      <package name='OpenPrintingPPDs-hpijs'/>
      <package name='gvfs'/>
      <package name='gvfs-fuse'/>
-     <package name='MozillaFirefox-branding-openSUSE'/>
      <package name='pulseaudio'/>
      <package name='alsa-plugins-pulse'/>
      <package name='pulseaudio-utils'/>
@@ -348,7 +341,6 @@
      <package name='MozillaThunderbird'/>
      <package name='okular'/>
      <package name='plasma5-session'/>
-     <package name='sddm-branding-openSUSE'/>
      <package name='skanlite'/>
      <package name='vlc'/>
      <package name='vlc-codecs'/>
