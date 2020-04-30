@@ -1,5 +1,5 @@
 ---
-componentName:  fancy
+componentName:  lilyum
 
 welcomeStyleCalamares:   false
 
@@ -19,8 +19,8 @@ strings:
 welcomeExpandingLogo:   true
 
 images:
-    productLogo:         "0004.png"
-    productIcon:         "0004.png"
+    productLogo:         "000.png"
+    productIcon:         "000.png"
     productWelcome:      "selam.png"
 
 slideshow:               "show.qml"
