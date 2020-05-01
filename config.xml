@@ -41,6 +41,8 @@
     <repository type="rpm-md" alias="kiwi" priority="1">
         <source path="obs://Virtualization:Appliances:Builder/openSUSE_Leap_15.2"/>
     </repository>
+    <repository type="rpm-md" alias="home:Tarbetu" priority="2">
+        <source path="https://download.opensuse.org/repositories/home:/Tarbetu/openSUSE_Leap_15.2/"/>
     </repository>
     <repository type='rpm-md' alias="Packman" imageinclude="true" priority="90">
       <source path='http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_15.2/'/>
@@ -398,6 +400,6 @@
      <package name='libQt5DBus-devel'/>
      <package name='libqt5-qtx11extras-devel'/>
      <package name='fftw3-devel'/>
-     <package name='shim'/>
+     <package name='flat-remix-blue-dark'/>
     </packages>
 </image>
