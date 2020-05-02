@@ -386,7 +386,7 @@
      <package name='hplip'/>
      <package name='kde-l10n-tr'/>
      <package name='libreoffice-l10n-tr'/>
-     <package name='kmozillahelpter'/>
+     <package name='kmozillahelper'/>
      <package name='MozillaThunderbird-translations-other'/>
      <package name='MozillaFirefox-translations-other'/>
      <package name='chromium-ffmpeg-extra'/>
