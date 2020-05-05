@@ -22,5 +22,5 @@ Ardından şu komutu "Lilyum" ve "cikti" isimli dizinlerin olduğu dizinde çal�
 \
 **Peki, kullanmak için illa ki derlemem mi gerekiyor?** \
 \
-Elbette ki gerekmiyor. Şuradan derlenmiş imaj dosyasını indirebilirsiniz:
-https://sourceforge.net/projects/lilyum/files/
+Elbette ki gerekmiyor. Şuradan en son derlenmiş olan imaj dosyasını indirebilirsiniz:
+https://sourceforge.net/projects/lilyum/files/latest/download

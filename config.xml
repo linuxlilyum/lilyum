@@ -404,5 +404,7 @@
      <package name='libqt5-qtx11extras-devel'/>
      <package name='fftw3-devel'/>
      <package name='flat-remix-blue-dark'/>
+     <package name="sddm"/>
+     <package name="nmcli"/>
     </packages>
 </image>
