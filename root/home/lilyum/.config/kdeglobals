@@ -156,3 +156,11 @@ activeForeground=221,221,221
 inactiveBackground=44,44,44
 inactiveBlend=44,44,44
 inactiveForeground=221,221,221
+
+[KDE Action Restrictions]
+action/switch_user=false
+switch_user=false
+action/start_new_session=false
+start_new_session=false
+action/lock_screen=false
+lock_screen=false
