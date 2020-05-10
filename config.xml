@@ -185,6 +185,7 @@
      <package name='dosfstools'/>
      <package name='gstreamer-plugins-good-extra'/>
      <package name='gstreamer-plugins-bad'/>
+     <package name="gstreamer-plugins-vaapi"/>
      <package name='libmtp9'/>
      <package name='hfsutils'/>
      <package name='jfsutils'/>
@@ -347,8 +348,8 @@
      <package name='okular'/>
      <package name='plasma5-session'/>
      <package name='skanlite'/>
-     <package name='vlc'/>
-     <package name='vlc-codecs'/>
+     <package name='kaffeine'/>
+     <package name='kaffeine-gstreamer'/>
      <package name='yast2-samba-client'/>
      <package name='yast2-samba-server'/>
      <package name='usb_modeswitch'/>
@@ -407,5 +408,6 @@
      <package name="sddm"/>
      <package name="nmcli"/>
      <package name="calamares-lilyum"/>
+     
     </packages>
 </image>

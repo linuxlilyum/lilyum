@@ -1,11 +1,11 @@
-**Lilyum nedir?**\
+**Lilyum nedir?** \
 \
 Lilyum, içeriğinde çeşitli özelleştirmelerin bulunduğu bir openSUSE çatalamasıdır. \
 OpenSUSE'ye kıyasla daha şık, daha kullanışlı ve daha hızlıdır. \
 Kurulumu nispeten daha kolaydır, öncedelen yapılandırıldığı için kurulum sonrası fazla iş istemez. \
 KDE masaüstü ortamı ile çalışır.
 
-**Bu sayfadaki dosyalar neye yarar?**\
+**Bu sayfadaki dosyalar neye yarar?** \
 \
 Bu sayfadaki dosyalar Lilyum'u Kiwi aracılığıyla sıfırdan derlemenizi sağlar.\
 Derleme işlemi sisteminizin gücüne göre bir saat ila dört saat arasında gerçekleşebilir. \

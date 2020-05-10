@@ -64,11 +64,13 @@ rpm --import /etc/zypp/repos.d/key-Packman.pub
 rpm --import /etc/zypp/repos.d/key-Skype.pub
 rpm --import /etc/zypp/repos.d/key-openSUSE.pub
 rpm --import /etc/zypp/repos.d/key-Nvidia.pub
+rpm --import /etc/zypp/repos.d/key-Tarbetu.pub
 rm /etc/zypp/repos.d/key-Google.pub
 rm /etc/zypp/repos.d/key-Packman.pub
 rm /etc/zypp/repos.d/key-Skype.pub
 rm /etc/zypp/repos.d/key-openSUSE.pub
 rm /etc/zypp/repos.d/key-Nvidia.pub
+rm /etc/zypp/repos.d/key-Tarbetu.pub
 
 rm -rf /var/cache/zypp/raw/*
 
