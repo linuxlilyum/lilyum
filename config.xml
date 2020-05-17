@@ -4,7 +4,7 @@
 <image schemaversion="6.8" name="Lilyum">
    <description type="system">
         <author>Emrecan Şuşter</author>
-        <contact>emrecansuster@outlook.com</contact>
+        <contact>('telegram-desktop', 'konvervation')</contact>
         <specification>
             Lilyum için config.xml dosyası 
         </specification>
@@ -25,22 +25,22 @@
         <user password="" home="/root" name="root" groups="root"/>
     </users>
     <repository type='rpm-md' alias="Packman" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="90">
-      <source path='http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_0.55/'/>
+      <source path='http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_15.2/'/>
     </repository>
     <repository type='rpm-md' alias="Tarbetu" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="2">
-      <source path='https://download.opensuse.org/repositories/home:/Tarbetu/openSUSE_0.55/'/>
+      <source path='https://download.opensuse.org/repositories/home:/Tarbetu/openSUSE_Leap_15.2/'/>
     </repository>
     <repository type='rpm-md' alias="Wine" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="91">
-      <source path='https://download.opensuse.org/repositories/Emulators:/Wine/openSUSE_0.55/'/>
+      <source path='https://download.opensuse.org/repositories/Emulators:/Wine/openSUSE_Leap_15.2/'/>
     </repository>
     <repository type='rpm-md' alias="KDE:Extra" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="91">
-      <source path='http://download.opensuse.org/repositories/KDE:/Extra/openSUSE_0.55/'/>
+      <source path='http://download.opensuse.org/repositories/KDE:/Extra/openSUSE_Leap_15.2/'/>
     </repository>
     <repository type='rpm-md' alias="YaST:Head" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="91">
-      <source path='http://download.opensuse.org/repositories/YaST:/Head/openSUSE_0.55/'/>
+      <source path='http://download.opensuse.org/repositories/YaST:/Head/openSUSE_Leap_15.2/'/>
     </repository>
     <repository type='rpm-md' alias="Games:Tools" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="92">
-      <source path='http://download.opensuse.org/repositories/games/openSUSE_0.55/'/>
+      <source path='http://download.opensuse.org/repositories/games/openSUSE_Leap_15.2/'/>
     </repository>
     <repository type='rpm-md' alias="GoogleChrome" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="98">
       <source path='http://dl.google.com/linux/chrome/rpm/stable/x86_64/'/>
@@ -52,13 +52,25 @@
       <source path='https://brave-browser-rpm-release.s3.brave.com/x86_64/'/>
     </repository>
     <repository type='rpm-md' alias="Signal" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="98">
-      <source path='https://download.opensuse.org/repositories/network:im:signal/openSUSE_0.55/'/>
+      <source path='https://download.opensuse.org/repositories/network:im:signal/openSUSE_Leap_15.2/'/>
     </repository>
     <repository type='rpm-md' alias="Nvidia" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="89">
-      <source path='https://download.nvidia.com/opensuse/leap/0.55'/>
+      <source path='https://download.nvidia.com/opensuse/leap/15.2'/>
     </repository>
     <repository type='rpm-md' alias="Kernel" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="89">
       <source path='http://download.opensuse.org/repositories/Kernel:/stable/standard/'/>
+    </repository>
+    <repository type='rpm-md' alias="OpenSUSE_OSS" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="99">
+      <source path='https://download.opensuse.org/distribution/leap/15.2/repo/oss/'/>
+    </repository>
+    <repository type='rpm-md' alias="OpenSUSE_OSS_Update" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="99">
+      <source path='https://download.opensuse.org/update/leap/15.2/oss/'/>
+    </repository>
+    <repository type='rpm-md' alias="OpenSUSE_Non-OSS" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="99">
+      <source path='https://download.opensuse.org/distribution/leap/15.2/repo/non-oss/'/>
+    </repository>
+    <repository type='rpm-md' alias="OpenSUSE_Non-OSS_Update" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="99">
+      <source path='https://download.opensuse.org/update/leap/15.2/non-oss/'/>
     </repository>
   <packages type="image">
      <!--Base-->
@@ -89,12 +101,17 @@
      <package name='filesystem'/>
      <package name='glibc-locale'/>
      <package name='openSUSE-release'/>
-     <package name='cracklib-dict-fullkexec-tools'/>
+     <package name='cracklib-dict-full'/>
+     <package name='kexec-tools'/>
      <package name='kernel-default'/>
      <package name='zypper'/>
      <package name='kernel-firmware'/>
      <package name='grub'/>
      <package name='calamares'/>
+     <package name='yast2-firstboot'/>
+     <package name='libmariadb3'/>
+     <package name='star-rmt'/>
+     <package name='libQt5Sql5-mysql'/>
   </packages>
   <packages type="bootstrap">
      <!--Extended base-->
@@ -127,6 +144,9 @@
      <package name='os-prober'/>
      <package name='gpg2'/>
      <package name='extra-cmake-modules'/>
+     <package name='rpcbind'/>
+     <package name='ucode-amd'/>
+     <package name='ucode-intel'/>
      <package name='calamares-lilyum'/>
      <!--Drivers, X11, Network and etc-->
      <package name='crda'/>
@@ -135,10 +155,12 @@
      <package name='libva-x11-2'/>
      <package name='libva-drm2'/>
      <package name='libva-intel-driver'/>
-     <package name='system-config-printerlibinput-tools'/>
+     <package name='system-config-printer'/>
+     <package name='libinput-tools'/>
      <package name='libinput-udev'/>
      <package name='bcm43xx-firmware'/>
-     <package name='bcm20702a1-firmwarelibimobiledevice6'/>
+     <package name='bcm20702a1-firmware'/>
+     <package name='libimobiledevice6'/>
      <package name='gvfs-backend-samba'/>
      <package name='lvm2'/>
      <package name='libmtp9'/>
@@ -301,7 +323,7 @@
      <!--Desktop-->
      <package name='libqt5-qtstyleplugins-platformtheme-gtk2'/>
      <package name='libqt5-qtbase-platformtheme-gtk3'/>
-     <package name='kdnsdd'/>
+     <package name='kdnssd'/>
      <package name='kio_audiocd4'/>
      <package name='kio-extras5'/>
      <package name='spectacle'/>
