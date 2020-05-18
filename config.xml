@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="utf-8"?>
 
 <image schemaversion="6.8" name="Lilyum">
@@ -45,20 +44,11 @@
     <repository type='rpm-md' alias="GoogleChrome" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="98">
       <source path='http://dl.google.com/linux/chrome/rpm/stable/x86_64/'/>
     </repository>
-    <repository type='rpm-md' alias="Vivaldi" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="98">
-      <source path='https://repo.vivaldi.com/archive/'/>
-    </repository>
-    <repository type='rpm-md' alias="BraveBrowser" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="98">
-      <source path='https://brave-browser-rpm-release.s3.brave.com/x86_64/'/>
-    </repository>
     <repository type='rpm-md' alias="Signal" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="98">
       <source path='https://download.opensuse.org/repositories/network:im:signal/openSUSE_Leap_15.2/'/>
     </repository>
     <repository type='rpm-md' alias="Nvidia" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="89">
       <source path='https://download.nvidia.com/opensuse/leap/15.2'/>
-    </repository>
-    <repository type='rpm-md' alias="Kernel" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="89">
-      <source path='http://download.opensuse.org/repositories/Kernel:/stable/standard/'/>
     </repository>
     <repository type='rpm-md' alias="OpenSUSE_OSS" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="99">
       <source path='https://download.opensuse.org/distribution/leap/15.2/repo/oss/'/>
@@ -154,7 +144,6 @@
      <package name='libva2'/>
      <package name='libva-x11-2'/>
      <package name='libva-drm2'/>
-     <package name='libva-intel-driver'/>
      <package name='system-config-printer'/>
      <package name='libinput-tools'/>
      <package name='libinput-udev'/>
@@ -276,7 +265,6 @@
      <package name='flatpak'/>
      <package name='neofetch'/>
      <package name='fftw3-devel'/>
-     <package name='nmcli'/>
      <package name='linux-glibc-devel'/>
      <package name='linux-glibc-devel'/>
      <!-- Codec and Fonts -->
@@ -286,13 +274,10 @@
      <package name='google-droid-fonts'/>
      <package name='dejavu-fonts'/>
      <package name='ubuntu-fonts'/>
-     <package name='libavcodec56'/>
      <package name='libavcodec57'/>
      <package name='libavcodec58'/>
-     <package name='libavformat56'/>
      <package name='libavformat57'/>
      <package name='libavformat58'/>
-     <package name='libavdevice56'/>
      <package name='libavdevice57'/>
      <package name='libavdevice58'/>
      <package name='noto-coloremoji-fonts'/>
@@ -379,7 +364,7 @@
      <!--Picture Viewers, Editors and Video Editing Utililies-->
      <package name='gimp'/>
      <package name='krita'/>
-     <package name='gwenviewer'/>
+     <package name='gwenview'/>
      <package name='kdenlive'/>
      <!--Games-->
      <package name='steam'/>
