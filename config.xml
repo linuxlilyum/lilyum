@@ -23,43 +23,43 @@
     <users>
         <user password="" home="/root" name="root" groups="root"/>
     </users>
-    <repository type='rpm-md' alias="Packman" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="90">
+    <repository type='rpm-md' alias="Packman" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="90">
       <source path='http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_15.2/'/>
     </repository>
-    <repository type='rpm-md' alias="Tarbetu" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="2">
+    <repository type='rpm-md' alias="Tarbetu" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="2">
       <source path='https://download.opensuse.org/repositories/home:/Tarbetu/openSUSE_Leap_15.2/'/>
     </repository>
-    <repository type='rpm-md' alias="Wine" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="91">
+    <repository type='rpm-md' alias="Wine" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="91">
       <source path='https://download.opensuse.org/repositories/Emulators:/Wine/openSUSE_Leap_15.2/'/>
     </repository>
-    <repository type='rpm-md' alias="KDE:Extra" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="91">
+    <repository type='rpm-md' alias="KDE:Extra" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="91">
       <source path='http://download.opensuse.org/repositories/KDE:/Extra/openSUSE_Leap_15.2/'/>
     </repository>
-    <repository type='rpm-md' alias="YaST:Head" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="91">
+    <repository type='rpm-md' alias="YaST:Head" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="91">
       <source path='http://download.opensuse.org/repositories/YaST:/Head/openSUSE_Leap_15.2/'/>
     </repository>
-    <repository type='rpm-md' alias="Games:Tools" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="92">
+    <repository type='rpm-md' alias="Games:Tools" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="92">
       <source path='http://download.opensuse.org/repositories/games/openSUSE_Leap_15.2/'/>
     </repository>
-    <repository type='rpm-md' alias="GoogleChrome" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="98">
+    <repository type='rpm-md' alias="GoogleChrome" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="98">
       <source path='http://dl.google.com/linux/chrome/rpm/stable/x86_64/'/>
     </repository>
-    <repository type='rpm-md' alias="Signal" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="98">
+    <repository type='rpm-md' alias="Signal" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="98">
       <source path='https://download.opensuse.org/repositories/network:im:signal/openSUSE_Leap_15.2/'/>
     </repository>
-    <repository type='rpm-md' alias="Nvidia" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="89">
+    <repository type='rpm-md' alias="Nvidia" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="89">
       <source path='https://download.nvidia.com/opensuse/leap/15.2'/>
     </repository>
-    <repository type='rpm-md' alias="OpenSUSE_OSS" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="99">
+    <repository type='rpm-md' alias="OpenSUSE_OSS" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="99">
       <source path='https://download.opensuse.org/distribution/leap/15.2/repo/oss/'/>
     </repository>
-    <repository type='rpm-md' alias="OpenSUSE_OSS_Update" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="99">
+    <repository type='rpm-md' alias="OpenSUSE_OSS_Update" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="99">
       <source path='https://download.opensuse.org/update/leap/15.2/oss/'/>
     </repository>
-    <repository type='rpm-md' alias="OpenSUSE_Non-OSS" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="99">
+    <repository type='rpm-md' alias="OpenSUSE_Non-OSS" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="99">
       <source path='https://download.opensuse.org/distribution/leap/15.2/repo/non-oss/'/>
     </repository>
-    <repository type='rpm-md' alias="OpenSUSE_Non-OSS_Update" imageinclude="True" package_gpgcheck="false" repository_gpgcheck="false" priority="99">
+    <repository type='rpm-md' alias="OpenSUSE_Non-OSS_Update" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="99">
       <source path='https://download.opensuse.org/update/leap/15.2/non-oss/'/>
     </repository>
   <packages type="image">
