@@ -70,7 +70,7 @@
      <package name='iputils'/>
      <package name='vim'/>
      <package name='grub2'/>
-     <package name='grub2-x86_64-efi'/>
+     <package name='grub2-x86_64-efi' arch='x86_64'/>
      <package name='syslinux'/>
      <package name='lvm2'/>
      <package name='fontconfig'/>
@@ -138,6 +138,7 @@
      <package name='ucode-amd'/>
      <package name='ucode-intel'/>
      <package name='calamares-lilyum'/>
+     <package name='flat-remix-icon-theme'/>
      <!--Drivers, X11, Network and etc-->
      <package name='crda'/>
      <package name='Mesa-dri'/>
@@ -348,7 +349,6 @@
      <package name='kconfigwidgets-devel'/>
      <package name='libQt5DBus-devel'/>
      <package name='libqt5-qtx11extras-devel'/>
-     <package name='flat-remix-icon-theme'/>
      <package name='sddm'/>
      <package name='yakuake'/>
      <!--The Internet-->
