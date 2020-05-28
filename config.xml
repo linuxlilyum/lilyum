@@ -3,7 +3,7 @@
 <image schemaversion="6.8" name="Lilyum">
    <description type="system">
         <author>Emrecan Şuşter</author>
-        <contact>telegram-desktop</contact>
+        <contact>('telegram-desktop', 'konvervation')</contact>
         <specification>
             Lilyum için config.xml dosyası 
         </specification>
@@ -333,14 +333,15 @@
      <package name='chromium'/>
      <package name='MozillaThunderbird'/>
      
-     <package name='transmission'/>
+     <package name='ktorrent'/>
      <!--Media and music players-->
-     <package name='mpv'/>
-     <package name='deadbeef'/>
+     <package name='kaffeine'/>
+     <package name='elisa'/>
      <!--Picture Viewers, Editors and Video Editing Utililies-->
      <package name='gimp'/>
-     <package name='eog'/>
-     <package name='mkvtoolnix'/>
+     <package name='krita'/>
+     <package name='gwenview'/>
+     <package name='kdenlive'/>
      <!--Games-->
      <package name='steam'/>
      <!--Office-->
