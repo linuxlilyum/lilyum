@@ -1,0 +1,166 @@
+[$Version]
+update_info=filepicker.upd:filepicker-remove-old-previews-entry,fonts_global.upd:Fonts_Global,fonts_global_toolbar.upd:Fonts_Global_Toolbar,icons_remove_effects.upd:IconsRemoveEffects,kwin.upd:animation-speed
+
+[ColorEffects:Disabled]
+ChangeSelectionColor=
+Color=34,34,34
+ColorAmount=0.5
+ColorEffect=2
+ContrastAmount=0.65
+ContrastEffect=0
+Enable=
+IntensityAmount=0.5
+IntensityEffect=0
+
+[ColorEffects:Inactive]
+ChangeSelectionColor=false
+Color=112,111,110
+ColorAmount=0.025
+ColorEffect=2
+ContrastAmount=0.1
+ContrastEffect=2
+Enable=false
+IntensityAmount=0
+IntensityEffect=0
+
+[Colors:Button]
+BackgroundAlternate=33,33,33
+BackgroundNormal=44,44,44
+DecorationFocus=221,221,221
+DecorationHover=128,128,128
+ForegroundActive=61,174,233
+ForegroundInactive=221,221,221
+ForegroundLink=41,128,185
+ForegroundNegative=218,68,83
+ForegroundNeutral=246,116,0
+ForegroundNormal=255,255,255
+ForegroundPositive=39,174,96
+ForegroundVisited=127,140,141
+
+[Colors:Complementary]
+BackgroundAlternate=33,33,33
+BackgroundNormal=33,33,33
+DecorationFocus=68,68,68
+DecorationHover=68,68,68
+ForegroundActive=246,116,0
+ForegroundInactive=221,221,221
+ForegroundLink=61,174,230
+ForegroundNegative=237,21,21
+ForegroundNeutral=201,206,59
+ForegroundNormal=221,221,221
+ForegroundPositive=17,209,22
+ForegroundVisited=61,174,230
+
+[Colors:Selection]
+BackgroundAlternate=128,128,128
+BackgroundNormal=128,128,128
+DecorationFocus=68,68,68
+DecorationHover=68,68,68
+ForegroundActive=252,252,252
+ForegroundInactive=221,221,221
+ForegroundLink=253,188,75
+ForegroundNegative=218,68,83
+ForegroundNeutral=246,116,0
+ForegroundNormal=255,255,255
+ForegroundPositive=39,174,96
+ForegroundVisited=189,195,199
+
+[Colors:Tooltip]
+BackgroundAlternate=33,33,33
+BackgroundNormal=44,44,44
+DecorationFocus=68,68,68
+DecorationHover=68,68,68
+ForegroundActive=61,174,233
+ForegroundInactive=221,221,221
+ForegroundLink=41,128,185
+ForegroundNegative=218,68,83
+ForegroundNeutral=246,116,0
+ForegroundNormal=221,221,221
+ForegroundPositive=39,174,96
+ForegroundVisited=127,140,141
+
+[Colors:View]
+BackgroundAlternate=33,33,33
+BackgroundNormal=44,44,44
+DecorationFocus=128,128,128
+DecorationHover=128,128,128
+ForegroundActive=61,174,233
+ForegroundInactive=221,221,221
+ForegroundLink=41,128,185
+ForegroundNegative=218,68,83
+ForegroundNeutral=246,116,0
+ForegroundNormal=255,255,255
+ForegroundPositive=39,174,96
+ForegroundVisited=127,140,141
+
+[Colors:Window]
+BackgroundAlternate=33,33,33
+BackgroundNormal=44,44,44
+DecorationFocus=33,33,33
+DecorationHover=33,33,33
+ForegroundActive=61,174,233
+ForegroundInactive=221,221,221
+ForegroundLink=41,128,185
+ForegroundNegative=218,68,83
+ForegroundNeutral=246,116,0
+ForegroundNormal=255,255,255
+ForegroundPositive=39,174,96
+ForegroundVisited=127,140,141
+
+
+[General]
+BrowserApplication=chromium-browser.desktop
+ColorScheme=Akava
+XftHintStyle=hintslight
+XftSubPixel=rgb
+font=SF Pro Rounded,10,-1,5,50,0,0,0,0,0
+menuFont=SF Pro Rounded,10,-1,5,50,0,0,0,0,0
+shadeSortColumn=true
+smallestReadableFont=SF Pro Rounded,8,-1,5,50,0,0,0,0,0
+toolBarFont=SF Pro Rounded,10,-1,5,50,0,0,0,0,0
+widgetStyle=Breeze
+
+[Icons]
+Theme=Flat-Remix-Blue-Dark
+
+[KDE]
+ColorScheme=Akava
+LookAndFeelPackage=Lilyum
+contrast=4
+widgetStyle=kvantum
+
+[KFileDialog Settings]
+Allow Expansion=false
+Automatically select filename extension=true
+Breadcrumb Navigation=true
+Decoration position=2
+LocationCombo Completionmode=5
+PathCombo Completionmode=5
+Show Bookmarks=false
+Show Full Path=false
+Show Inline Previews=true
+Show Preview=false
+Show Speedbar=true
+Show hidden files=false
+Sort by=Date
+Sort directories first=true
+Sort reversed=false
+Speedbar Width=138
+View Style=DetailTree
+
+[WM]
+activeBackground=44,44,44
+activeBlend=44,44,44
+activeFont=SF Pro Rounded,10,-1,5,50,0,0,0,0,0
+activeForeground=221,221,221
+inactiveBackground=44,44,44
+inactiveBlend=44,44,44
+inactiveForeground=221,221,221
+
+[KDE Action Restrictions]
+action/switch_user=false
+switch_user=false
+action/start_new_session=false
+start_new_session=false
+action/lock_screen=false
+lock_screen=false

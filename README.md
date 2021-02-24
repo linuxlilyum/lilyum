@@ -2,7 +2,8 @@
 \
 Lilyum, içeriğinde çeşitli özelleştirmelerin bulunduğu bir openSUSE çatalamasıdır. \
 OpenSUSE'ye kıyasla daha şık, daha kullanışlı ve daha hızlıdır. \
-Kurulumu nispeten daha kolaydır, önceden yapılandırıldığı için kurulum sonrası fazla iş istemez. \
+Kurulumu nispeten daha kolaydır, öncedelen yapılandırıldığı için kurulum sonrası fazla iş istemez. \
+KDE masaüstü ortamı ile çalışır.
 
 **Bu sayfadaki dosyalar neye yarar?** \
 \

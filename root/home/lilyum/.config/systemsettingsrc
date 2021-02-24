@@ -1,0 +1,29 @@
+[ConfigDialog]
+Height 768=281
+Width 1366=406
+
+[DownloadDialog Settings]
+Height 768=454
+Width 1366=700
+
+[HTML Settings]
+AutomaticDetectionLanguage=1
+
+[Main]
+ActiveView=icon_mode
+
+[MainWindow]
+Height 1080=623
+Height 768=639
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAABFAAAAJVAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+Width 1366=1104
+Width 1920=1085
+
+[Notification Messages]
+shortcuts_saved_info=false
+
+[classic_mode]
+autoExpandOneLevel=false
+viewLayout=342,685
