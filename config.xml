@@ -1,379 +1,333 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<image schemaversion="6.8" name="Lilyum">
-   <description type="system">
-        <author>Emrecan Şuşter</author>
-        <contact>('telegram-desktop', 'konvervation')</contact>
-        <specification>
-            Lilyum için config.xml dosyası 
-        </specification>
-    </description>
-    <preferences>
-        <type image="iso" primary="true" flags="overlay" hybrid="true" firmware="uefi" kernelcmdline="quiet" hybridpersistent_filesystem="ext4" hybridpersistent="true" mediacheck="true"/>
-        <version>0.55</version>
-        <packagemanager>zypper</packagemanager>
-        <locale>tr_TR</locale>
-        <keytable>trq.map.gz</keytable>
-        <timezone>Europe/Istanbul</timezone>
-        <rpm-excludedocs>true</rpm-excludedocs>
-        <rpm-check-signatures>false</rpm-check-signatures>
-        <bootsplash-theme></bootsplash-theme>
-        <bootloader-theme>Lilyum</bootloader-theme>
-    </preferences>
-    <users>
-        <user password="" home="/root" name="root" groups="root"/>
-    </users>
-    <repository type='rpm-md' alias="Packman" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="90">
-      <source path='http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_15.2/'/>
-    </repository>
-    <repository type='rpm-md' alias="Tarbetu" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="2">
-      <source path='https://download.opensuse.org/repositories/home:/Tarbetu/openSUSE_Leap_15.2/'/>
-    </repository>
-    <repository type='rpm-md' alias="Wine" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="91">
-      <source path='https://download.opensuse.org/repositories/Emulators:/Wine/openSUSE_Leap_15.2/'/>
-    </repository>
-    <repository type='rpm-md' alias="KDE:Extra" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="91">
-      <source path='http://download.opensuse.org/repositories/KDE:/Extra/openSUSE_Leap_15.2/'/>
-    </repository>
-    <repository type='rpm-md' alias="YaST:Head" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="91">
-      <source path='http://download.opensuse.org/repositories/YaST:/Head/openSUSE_Leap_15.2/'/>
-    </repository>
-    <repository type='rpm-md' alias="Games:Tools" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="92">
-      <source path='http://download.opensuse.org/repositories/games/openSUSE_Leap_15.2/'/>
-    </repository>
-    <repository type='rpm-md' alias="GoogleChrome" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="98">
-      <source path='http://dl.google.com/linux/chrome/rpm/stable/x86_64/'/>
-    </repository>
-    <repository type='rpm-md' alias="Signal" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="98">
-      <source path='https://download.opensuse.org/repositories/network:im:signal/openSUSE_Leap_15.2/'/>
-    </repository>
-    <repository type='rpm-md' alias="Nvidia" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="89">
-      <source path='https://download.nvidia.com/opensuse/leap/15.2'/>
-    </repository>
-    <repository type='rpm-md' alias="OpenSUSE_OSS" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="99">
-      <source path='https://download.opensuse.org/distribution/leap/15.2/repo/oss/'/>
-    </repository>
-    <repository type='rpm-md' alias="OpenSUSE_OSS_Update" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="99">
-      <source path='https://download.opensuse.org/update/leap/15.2/oss/'/>
-    </repository>
-    <repository type='rpm-md' alias="OpenSUSE_Non-OSS" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="99">
-      <source path='https://download.opensuse.org/distribution/leap/15.2/repo/non-oss/'/>
-    </repository>
-    <repository type='rpm-md' alias="OpenSUSE_Non-OSS_Update" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="99">
-      <source path='https://download.opensuse.org/update/leap/15.2/non-oss/'/>
-    </repository>
-  <packages type="image">
-     <!--Base-->
-     <package name='checkmedia'/>
-     <package name='patterns-openSUSE-base'/>
-     <package name='ifplugd'/>
-     <package name='iputils'/>
-     <package name='vim'/>
-     <package name='grub2'/>
-     <package name='grub2-x86_64-efi' arch='x86_64'/>
-     <package name='syslinux'/>
-     <package name='lvm2'/>
-     <package name='fontconfig'/>
-     <package name='fonts-config'/>
-     <package name='tar'/>
-     <package name='parted'/>
-     <package name='openssh'/>
-     <package name='iproute2'/>
-     <package name='less'/>
-     <package name='bash-completion'/>
-     <package name='dhcp-client'/>
-     <package name='which'/>
-     <package name='shim'/>
-     <package name='kernel-default'/>
-     <package name='timezone'/>
-     <package name='dracut-kiwi-live'/>
-     <package name='udev'/>
-     <package name='filesystem'/>
-     <package name='glibc-locale'/>
-     <package name='openSUSE-release'/>
-     <package name='cracklib-dict-full'/>
-     <package name='kexec-tools'/>
-     <package name='kernel-default'/>
-     <package name='zypper'/>
-     <package name='kernel-firmware'/>
-     <package name='grub'/>
-     <package name='calamares'/>
-     <package name='yast2-firstboot'/>
-     <package name='libmariadb3'/>
-     <package name='star-rmt'/>
-     <package name='libQt5Sql5-mysql'/>
-  </packages>
-  <packages type="bootstrap">
-     <!--Extended base-->
-     <package name='ca-certificates'/>
-     <package name='ca-certificates-mozilla'/>
-     <package name='mokutil'/>
-     <package name='usbmuxd'/>
-     <package name='haveged'/>
-     <package name='dosfstools'/>
-     <package name='udisks2'/>
-     <package name='ntp'/>
-     <package name='cryptsetup'/>
-     <package name='grub2-snapper-plugin'/>
-     <package name='coreutils'/>
-     <package name='libiptcdata0'/>
-     <package name='libiptcdata'/>
-     <package name='libibus-1_0-5'/>
-     <package name='glibc-locale'/>
-     <package name='glibc'/>
-     <package name='pulseaudio'/>
-     <package name='alsa-plugins-pulse'/>
-     <package name='pulseaudio-utils'/>
-     <package name='pulseaudio-module-bluetooth'/>
-     <package name='pulseaudio-module-zeroconf'/>
-     <package name='pulseaudio-module-gconf'/>
-     <package name='avahi'/>
-     <package name='alsa-firmware'/>
-     <package name='libstdc++6-32bit'/>
-     <package name='ModemManager'/>
-     <package name='os-prober'/>
-     <package name='gpg2'/>
-     <package name='extra-cmake-modules'/>
-     <package name='rpcbind'/>
-     <package name='ucode-amd'/>
-     <package name='ucode-intel'/>
-     <package name='sddm'/>
-     <package name='calamares-lilyum'/>
-     <package name='flat-remix-icon-theme'/>
-     <package name='BreezeBlurred'/>
-     <!--Drivers, X11, Network and etc-->
-     <package name='crda'/>
-     <package name='Mesa-dri'/>
-     <package name='libva2'/>
-     <package name='libva-x11-2'/>
-     <package name='libva-drm2'/>
-     <package name='system-config-printer'/>
-     <package name='libinput-tools'/>
-     <package name='libinput-udev'/>
-     <package name='bcm43xx-firmware'/>
-     <package name='bcm20702a1-firmware'/>
-     <package name='libimobiledevice6'/>
-     <package name='gvfs-backend-samba'/>
-     <package name='lvm2'/>
-     <package name='libmtp9'/>
-     <package name='hfsutils'/>
-     <package name='jfsutils'/>
-     <package name='xfsprogs'/>
-     <package name='ntfs-3g'/>
-     <package name='ntfsprogs'/>
-     <package name='mtp-tools'/>
-     <package name='sane-backends-autoconfig'/>
-     <package name='samba'/>
-     <package name='ifuse'/>
-     <package name='python-imobiledevice'/>
-     <package name='imobiledevice-tools'/>
-     <package name='cups-filters-cups-browsed'/>
-     <package name='cups-backends'/>
-     <package name='parallel-printer-support'/>
-     <package name='udev-configure-printer'/>
-     <package name='yast2-printer'/>
-     <package name='xf86-video-fbdev'/>
-     <package name='libglut3'/>
-     <package name='virtualbox-guest-tools'/>
-     <package name='tlp-rdw'/>
-     <package name='tlp'/>
-     <package name='iw'/>
-     <package name='NetworkManager'/>
-     <package name='xorg-x11-libX11-ccache'/>
-     <package name='xorg-x11-libs'/>
-     <package name='xorg-x11-driver-input'/>
-     <package name='yast2-x11'/>
-     <package name='xorg-x11-server-extra'/>
-     <package name='yast2-fonts'/>
-     <package name='fuse-exfat'/>
-     <package name='gvfs-backend-afc'/>
-     <package name='gvfs-backends'/>
-     <package name='Mesa-demo-x'/>
-     <package name='exfat-utils'/>
-     <package name='libxcb-xf86dri0'/>
-     <package name='iputils'/>
-     <package name='e2fsprogs'/>
-     <package name='sax3'/>
-     <package name='xf86-input-keyboard'/>
-     <package name='xf86-video-vmware'/>
-     <package name='xf86-input-mouse'/>
-     <package name='xf86-input-synaptics'/>
-     <package name='xf86-input-vmmouse'/>
-     <package name='xf86-input-evdev'/>
-     <package name='xf86-input-wacom'/>
-     <package name='xf86-input-joystick'/>
-     <package name='gutenprint'/>
-     <package name='epson-inkjet-printer-escpr'/>
-     <package name='cups-pk-helper'/>
-     <package name='cups-filters'/>
-     <package name='manufacturer-PPDs'/>
-     <package name='OpenPrintingPPDs'/>
-     <package name='OpenPrintingPPDs-ghostscript'/>
-     <package name='OpenPrintingPPDs-postscript'/>
-     <package name='OpenPrintingPPDs-hpijs'/>
-     <package name='bluez-firmware'/>
-     <package name='ivtv-firmware'/>
-     <package name='bcm43xx-firmware'/>
-     <package name='atmel-firmware'/>
-     <package name='mpt-firmware'/>
-     <package name='adaptec-firmware'/>
-     <package name='zd1211-firmware'/>
-     <package name='crystalhd-firmware'/>
-     <package name='isight-firmware-tools'/>
-     <package name='ipw-firmware'/>
-     <package name='xf86-video-intel'/>
-     <package name='intel-media-driver'/>
-     <package name='xorg-x11'/>
-     <package name='usb_modeswitch'/>
-     <package name='system-config-printer-dbus-service'/>
-     <!--Graphics-->
-     <package name='xf86-video-amdgpu'/>
-     <!--Additional-->
-     <package name='p7zip'/>
-     <package name='unrar'/>
-     <package name='python3-smbc'/>
-     <package name='gparted'/>
-     <package name='python-gtk'/>
-     <package name='python-gobject-Gdk'/>
-     <package name='python3-gobject-Gdk'/>
-     <package name='python3-coverage'/>
-     <package name='python-smbc'/>
-     <package name='gdk-pixbuf-loader-rsvg'/>
-     <package name='samba-winbind'/>
-     <package name='samba'/>
-     <package name='hunspell'/>
-     <package name='poppler-tools'/>
-     <package name='Mesa'/>
-     <package name='sudo'/>
-     <package name='nano'/>
-     <package name='libdmx1'/>
-     <package name='htop'/>
-     <package name='curl'/>
-     <package name='gsettings-backend-dconf'/>
-     <package name='vim'/>
-     <package name='xdg-user-dirs'/>
-     <package name='xdg-user-dirs-gtk'/>
-     <package name='gvfs'/>
-     <package name='gvfs-fuse'/>
-     <package name='rsync'/>
-     <package name='psmisc'/>
-     <package name='xkill'/>
-     <package name='xrandr'/>
-     <package name='vlc-codecs'/>
-     <package name='wget'/>
-     <package name='rar'/>
-     <package name='unrar'/>
-     <package name='git'/>
-     <package name='flatpak'/>
-     <package name='neofetch'/>
-     <package name='fftw3-devel'/>
-     <package name='linux-glibc-devel'/>
-     <package name='linux-glibc-devel'/>
-     <!-- Codec and Fonts -->
-     <package name='gstreamer-plugins-good-extra'/>
-     <package name='gstreamer-plugins-bad'/>
-     <package name='cantarell-fonts'/>
-     <package name='google-droid-fonts'/>
-     <package name='dejavu-fonts'/>
-     <package name='ubuntu-fonts'/>
-     <package name='libavcodec57'/>
-     <package name='libavcodec58'/>
-     <package name='libavformat57'/>
-     <package name='libavformat58'/>
-     <package name='libavdevice57'/>
-     <package name='libavdevice58'/>
-     <package name='noto-coloremoji-fonts'/>
-     <!--YaST and SUSE Utililies-->
-     <package name='patterns-openSUSE-minimal_base'/>
-     <package name='patterns-openSUSE-print_server'/>
-     <package name='patterns-yast-x11_yast'/>
-     <package name='patterns-openSUSE-sw_management_gnome'/>
-     <package name='patterns-openSUSE-gnome_yast'/>
-     <package name='patterns-openSUSE-enhanced_base'/>
-     <package name='patterns-openSUSE-enhanced_base_opt'/>
-     <package name='patterns-openSUSE-x11_opt'/>
-     <package name='patterns-fonts-fonts'/>
-     <package name='patterns-yast-yast2_install_wf'/>
-     <package name='patterns-fonts-fonts_opt'/>
-     <package name='patterns-openSUSE-sw_management'/>
-     <package name='patterns-yast-yast2_basis'/>
-     <package name='patterns-openSUSE-x11'/>
-     <package name='patterns-yast-yast2_basis'/>
-     <package name='yast2-printer'/>
-     <package name='yast2-snapper'/>
-     <package name='snapper-zypp-plugin'/>
-     <package name='SuSEfirewall2'/>
-     <package name='yast2-sudo'/>
-     <package name='yast2-metapackage-handler'/>
-     <package name='yast2-samba-client'/>
-     <package name='yast2-samba-server'/>
-     <!--Desktop-->
-     <package name='libqt5-qtstyleplugins-platformtheme-gtk2'/>
-     <package name='libqt5-qtbase-platformtheme-gtk3'/>
-     <package name='kdnssd'/>
-     <package name='kio_audiocd4'/>
-     <package name='kio-extras5'/>
-     <package name='spectacle'/>
-     <package name='baloo5-file'/>
-     <package name='baloo5-tools'/>
-     <package name='kdegraphics-thumbnailers'/>
-     <package name='kde-odf-thumbnail'/>
-     <package name='plasma5-addons'/>
-     <package name='plasma5-pa'/>
-     <package name='bluedevil5'/>
-     <package name='dolphin'/>
-     <package name='kate'/>
-     <package name='kcalc'/>
-     <package name='kcm-touchpad'/>
-     <package name='kde-gtk-config5'/>
-     <package name='kde-print-manager'/>
-     <package name='kio_audiocd'/>
-     <package name='kio_iso'/>
-     <package name='kio_kamera'/>
-     <package name='konsole'/>
-     <package name='kscreen'/>
-     <package name='patterns-kde-kde_yast'/>
-     <package name='okular'/>
-     <package name='plasma5-session'/>
-     <package name='skanlite'/>
-     <package name='kfind'/>
-     <package name='phonon-backend-gstreamer'/>
-     <package name='phonon4qt5-backend-gstreamer'/>
-     <package name='ark'/>
-     <package name='latte-dock'/>
-     <package name='kvantum-qt5'/>
-     <package name='kcoreaddons-devel'/>
-     <package name='kguiaddons-devel'/>
-     <package name='kconfig-devel'/>
-     <package name='kwindowsystem-devel'/>
-     <package name='ki18n-devel'/>
-     <package name='kconfigwidgets-devel'/>
-     <package name='libQt5DBus-devel'/>
-     <package name='libqt5-qtx11extras-devel'/>
-     <package name='yakuake'/>
-     <!--The Internet-->
-     <package name='MozillaFirefox'/>
-     <package name='opera'/>
-     <package name='chromium'/>
-     <package name='MozillaThunderbird'/>
-     <package name='kmozillahelper'/>
-     <package name='ktorrent'/>
-     <!--Media and music players-->
-     <package name='kaffeine'/>
-     <package name='elisa'/>
-     <!--Picture Viewers, Editors and Video Editing Utililies-->
-     <package name='gimp'/>
-     <package name='krita'/>
-     <package name='gwenview'/>
-     <package name='kdenlive'/>
-     <!--Games-->
-     <package name='steam'/>
-     <!--Office-->
-     <package name='libreoffice'/>
-     <package name='libreoffice-calc'/>
-     <package name='libreoffice-draw'/>
-     <package name='libreoffice-impress'/>
-     <package name='libreoffice-writer'/>
-     <package name='libreoffice-gtk3'/>
-  </packages>
+  <image schemaversion="6.8" name="Lilyum">
+     <description type="system">
+          <author>Emrecan Şuşter</author>
+          <contact>emrecansuster@outlook.com</contact>
+          <specification>
+              Lilyum project is an Linux distribution which based on OpenSUSE. Lilyum's primary goal are elegancy and Performance
+          </specification>
+      </description>
+      <preferences>
+          <type image="iso" primary="true" flags="overlay" squashfscompression="zstd" hybrid="true" firmware="uefi" kernelcmdline="quiet" hybridpersistent_filesystem="ext4" hybridpersistent="true" mediacheck="true"/>
+          <version>0.55</version>
+          <packagemanager>zypper</packagemanager>
+          <locale>tr_TR</locale>
+          <keytable>trq.map.gz</keytable>
+          <timezone>Europe/Istanbul</timezone>
+          <rpm-excludedocs>true</rpm-excludedocs>
+          <rpm-check-signatures>false</rpm-check-signatures>
+          <bootsplash-theme></bootsplash-theme>
+          <bootloader-theme>Lilyum</bootloader-theme>
+      </preferences>
+      <users>
+          <user password="" home="/root" name="root" groups="root"/>
+      </users>
+    
+    	<repository type='rpm-md' alias="Packman" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="90">
+        <source path='http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/'/>
+      </repository>
+			<repository type='rpm-md' alias="Tarbetu" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="82">
+        <source path='https://download.opensuse.org/repositories/home:/Tarbetu/openSUSE_Tumbleweed/'/>
+      </repository>
+			<repository type='rpm-md' alias="Wine" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="91">
+        <source path='https://download.opensuse.org/repositories/Emulators:/Wine/openSUSE_Tumbleweed/'/>
+      </repository>
+			<repository type='rpm-md' alias="KDE:Extra" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="91">
+        <source path='http://download.opensuse.org/repositories/KDE:/Extra/openSUSE_Tumbleweed/'/>
+      </repository>
+			<repository type='rpm-md' alias="YaST:Head" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="91">
+        <source path='http://download.opensuse.org/repositories/YaST:/Head/openSUSE_Tumbleweed/'/>
+      </repository>
+			<repository type='rpm-md' alias="Games:Tools" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="92">
+        <source path='http://download.opensuse.org/repositories/games/openSUSE_Tumbleweed/'/>
+      </repository>
+			<repository type='rpm-md' alias="GoogleChrome" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="98">
+        <source path='http://dl.google.com/linux/chrome/rpm/stable/x86_64/'/>
+      </repository>
+			<repository type='rpm-md' alias="Signal" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="98">
+        <source path='https://download.opensuse.org/repositories/network:im:signal/openSUSE_Tumbleweed/'/>
+      </repository>
+			<repository type='rpm-md' alias="Nvidia" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="89">
+        <source path='https://download.nvidia.com/opensuse/tumbleweed/'/>
+      </repository>
+			<repository type='rpm-md' alias="OpenSUSE_OSS" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="99">
+        <source path='https://download.opensuse.org/tumbleweed/repo/oss/'/>
+      </repository>
+			<repository type='rpm-md' alias="OpenSUSE_Non-OSS" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="99">
+        <source path='https://download.opensuse.org/tumbleweed/repo/non-oss/'/>
+      </repository>
+			<repository type='rpm-md' alias="OpenSUSE_Update" imageinclude="true" package_gpgcheck="false" repository_gpgcheck="false" priority="99">
+        <source path='https://download.opensuse.org/update/tumbleweed'/>
+      </repository>
+    <packages type="bootstrap">
+      <package name='xf86-video-amdgpu'/>
+			<package name='libqt5-qtstyleplugins-platformtheme-gtk2'/>
+			<package name='libqt5-qtbase-platformtheme-gtk3'/>
+			<package name='kdnssd'/>
+			<package name='kio-extras5'/>
+			<package name='spectacle'/>
+			<package name='baloo5-file'/>
+			<package name='baloo5-tools'/>
+			<package name='kdegraphics-thumbnailers'/>
+			<package name='kde-odf-thumbnail'/>
+			<package name='plasma5-addons'/>
+			<package name='plasma5-pa'/>
+			<package name='bluedevil5'/>
+			<package name='dolphin'/>
+			<package name='kate'/>
+			<package name='kcalc'/>
+			<package name='kcm-touchpad'/>
+			<package name='kde-gtk-config5'/>
+			<package name='kde-print-manager'/>
+			<package name='kio_audiocd'/>
+			<package name='kio_iso'/>
+			<package name='kio_kamera'/>
+			<package name='konsole'/>
+			<package name='kscreen'/>
+			<package name='patterns-kde-kde_yast'/>
+			<package name='okular'/>
+			<package name='plasma5-session'/>
+			<package name='skanlite'/>
+			<package name='kfind'/>
+			<package name='phonon4qt5-backend-gstreamer'/>
+			<package name='ark'/>
+			<package name='latte-dock'/>
+			<package name='kvantum-qt5'/>
+			<package name='kcoreaddons-devel'/>
+			<package name='kguiaddons-devel'/>
+			<package name='kconfig-devel'/>
+			<package name='kwindowsystem-devel'/>
+			<package name='ki18n-devel'/>
+			<package name='kconfigwidgets-devel'/>
+			<package name='libQt5DBus-devel'/>
+			<package name='libqt5-qtx11extras-devel'/>
+			<package name='flat-remix-icon-theme'/>
+			<package name='sddm'/>
+			<package name='yakuake'/>
+			<package name='MozillaFirefox'/>
+			<package name='MozillaThunderbird'/>
+			<package name='lollypop'/>
+			<package name='celluloid'/>
+			<package name='eog'/>
+			<package name='gimp'/>
+			<package name='eog-plugins'/>
+			<package name='transmission'/>
+			<package name='fish'/>
+			<package name='checkmedia'/>
+			<package name='patterns-openSUSE-base'/>
+			<package name='iputils'/>
+			<package name='vim'/>
+			<package name='grub2'/>
+			<package name='grub2-x86_64-efi'/>
+			<package name='syslinux'/>
+			<package name='lvm2'/>
+			<package name='fontconfig'/>
+			<package name='fonts-config'/>
+			<package name='tar'/>
+			<package name='parted'/>
+			<package name='openssh'/>
+			<package name='iproute2'/>
+			<package name='less'/>
+			<package name='bash-completion'/>
+			<package name='dhcp-client'/>
+			<package name='which'/>
+			<package name='shim'/>
+			<package name='kernel-default'/>
+			<package name='timezone'/>
+			<package name='dracut-kiwi-live'/>
+			<package name='udev'/>
+			<package name='filesystem'/>
+			<package name='glibc-locale'/>
+			<package name='openSUSE-release'/>
+			<package name='cracklib-dict-full'/>
+			<package name='kexec-tools'/>
+			<package name='kernel-default'/>
+			<package name='zypper'/>
+			<package name='kernel-firmware'/>
+			<package name='grub'/>
+			<package name='calamares'/>
+			<package name='yast2-firstboot'/>
+			<package name='libmariadb3'/>
+			<package name='libQt5Sql5-mysql'/>
+			<package name='ca-certificates'/>
+			<package name='ca-certificates-mozilla'/>
+			<package name='mokutil'/>
+			<package name='usbmuxd'/>
+			<package name='haveged'/>
+			<package name='dosfstools'/>
+			<package name='udisks2'/>
+			<package name='ntp'/>
+			<package name='cryptsetup'/>
+			<package name='grub2-snapper-plugin'/>
+			<package name='coreutils'/>
+			<package name='libiptcdata0'/>
+			<package name='libiptcdata'/>
+			<package name='libibus-1_0-5'/>
+			<package name='glibc-locale'/>
+			<package name='glibc'/>
+			<package name='pulseaudio'/>
+			<package name='alsa-plugins-pulse'/>
+			<package name='pulseaudio-utils'/>
+			<package name='pulseaudio-module-bluetooth'/>
+			<package name='pulseaudio-module-zeroconf'/>
+			<package name='pulseaudio-module-gconf'/>
+			<package name='avahi'/>
+			<package name='alsa-firmware'/>
+			<package name='libstdc++6-32bit'/>
+			<package name='ModemManager'/>
+			<package name='os-prober'/>
+			<package name='gpg2'/>
+			<package name='extra-cmake-modules'/>
+			<package name='rpcbind'/>
+			<package name='ucode-amd'/>
+			<package name='ucode-intel'/>
+			<package name='crda'/>
+			<package name='Mesa-dri'/>
+			<package name='libva2'/>
+			<package name='libva-x11-2'/>
+			<package name='libva-drm2'/>
+			<package name='system-config-printer'/>
+			<package name='libinput-tools'/>
+			<package name='libinput-udev'/>
+			<package name='bcm43xx-firmware'/>
+			<package name='bcm20702a1-firmware'/>
+			<package name='gvfs-backend-samba'/>
+			<package name='lvm2'/>
+			<package name='libmtp9'/>
+			<package name='hfsutils'/>
+			<package name='jfsutils'/>
+			<package name='xfsprogs'/>
+			<package name='ntfs-3g'/>
+			<package name='ntfsprogs'/>
+			<package name='mtp-tools'/>
+			<package name='sane-backends-autoconfig'/>
+			<package name='samba'/>
+			<package name='ifuse'/>
+			<package name='imobiledevice-tools'/>
+			<package name='cups-filters-cups-browsed'/>
+			<package name='cups-backends'/>
+			<package name='parallel-printer-support'/>
+			<package name='udev-configure-printer'/>
+			<package name='yast2-printer'/>
+			<package name='xf86-video-fbdev'/>
+			<package name='libglut3'/>
+			<package name='virtualbox-guest-tools'/>
+			<package name='tlp-rdw'/>
+			<package name='tlp'/>
+			<package name='iw'/>
+			<package name='NetworkManager'/>
+			<package name='xorg-x11-libX11-ccache'/>
+			<package name='xorg-x11-libs'/>
+			<package name='xorg-x11-driver-input'/>
+			<package name='yast2-x11'/>
+			<package name='xorg-x11-server-extra'/>
+			<package name='yast2-fonts'/>
+			<package name='fuse-exfat'/>
+			<package name='gvfs-backend-afc'/>
+			<package name='gvfs-backends'/>
+			<package name='Mesa-demo-x'/>
+			<package name='exfat-utils'/>
+			<package name='libxcb-xf86dri0'/>
+			<package name='iputils'/>
+			<package name='e2fsprogs'/>
+			<package name='sax3'/>
+			<package name='xf86-input-keyboard'/>
+			<package name='xf86-video-vmware'/>
+			<package name='xf86-input-mouse'/>
+			<package name='xf86-input-synaptics'/>
+			<package name='xf86-input-vmmouse'/>
+			<package name='xf86-input-evdev'/>
+			<package name='xf86-input-wacom'/>
+			<package name='xf86-input-joystick'/>
+			<package name='gutenprint'/>
+			<package name='epson-inkjet-printer-escpr'/>
+			<package name='hplip'/>
+			<package name='cups-pk-helper'/>
+			<package name='cups-filters'/>
+			<package name='manufacturer-PPDs'/>
+			<package name='OpenPrintingPPDs'/>
+			<package name='OpenPrintingPPDs-ghostscript'/>
+			<package name='OpenPrintingPPDs-postscript'/>
+			<package name='OpenPrintingPPDs-hpijs'/>
+			<package name='bluez-firmware'/>
+			<package name='ivtv-firmware'/>
+			<package name='bcm43xx-firmware'/>
+			<package name='atmel-firmware'/>
+			<package name='mpt-firmware'/>
+			<package name='adaptec-firmware'/>
+			<package name='zd1211-firmware'/>
+			<package name='crystalhd-firmware'/>
+			<package name='isight-firmware-tools'/>
+			<package name='ipw-firmware'/>
+			<package name='xf86-video-intel'/>
+			<package name='intel-media-driver'/>
+			<package name='xorg-x11'/>
+			<package name='usb_modeswitch'/>
+			<package name='system-config-printer-dbus-service'/>
+			<package name='p7zip'/>
+			<package name='unrar'/>
+			<package name='python3-smbc'/>
+			<package name='gparted'/>
+			<package name='python-gtk'/>
+			<package name='python3-coverage'/>
+			<package name='gdk-pixbuf-loader-rsvg'/>
+			<package name='samba-winbind'/>
+			<package name='samba'/>
+			<package name='hunspell'/>
+			<package name='poppler-tools'/>
+			<package name='Mesa'/>
+			<package name='sudo'/>
+			<package name='nano'/>
+			<package name='libdmx1'/>
+			<package name='htop'/>
+			<package name='curl'/>
+			<package name='gsettings-backend-dconf'/>
+			<package name='vim'/>
+			<package name='xdg-user-dirs'/>
+			<package name='xdg-user-dirs-gtk'/>
+			<package name='gvfs'/>
+			<package name='gvfs-fuse'/>
+			<package name='rsync'/>
+			<package name='psmisc'/>
+			<package name='xkill'/>
+			<package name='xrandr'/>
+			<package name='vlc-codecs'/>
+			<package name='wget'/>
+			<package name='rar'/>
+			<package name='unrar'/>
+			<package name='git'/>
+			<package name='flatpak'/>
+			<package name='neofetch'/>
+			<package name='fftw3-devel'/>
+			<package name='linux-glibc-devel'/>
+			<package name='linux-glibc-devel'/>
+			<package name='patterns-openSUSE-minimal_base'/>
+			<package name='patterns-openSUSE-print_server'/>
+			<package name='patterns-yast-x11_yast'/>
+			<package name='patterns-openSUSE-sw_management_gnome'/>
+			<package name='patterns-openSUSE-gnome_yast'/>
+			<package name='patterns-openSUSE-enhanced_base'/>
+			<package name='patterns-fonts-fonts'/>
+			<package name='patterns-yast-yast2_install_wf'/>
+			<package name='patterns-fonts-fonts_opt'/>
+			<package name='patterns-openSUSE-sw_management'/>
+			<package name='patterns-yast-yast2_basis'/>
+			<package name='patterns-openSUSE-x11'/>
+			<package name='patterns-yast-yast2_basis'/>
+			<package name='yast2-printer'/>
+			<package name='yast2-snapper'/>
+			<package name='snapper-zypp-plugin'/>
+			<package name='yast2-sudo'/>
+			<package name='yast2-metapackage-handler'/>
+			<package name='yast2-samba-client'/>
+			<package name='yast2-samba-server'/>
+			<package name='calamares-lilyum'/>
+			<package name='libreoffice'/>
+			<package name='libreoffice-calc'/>
+			<package name='libreoffice-draw'/>
+			<package name='libreoffice-impress'/>
+			<package name='libreoffice-writer'/>
+			<package name='libreoffice-gtk3'/>
+    </packages>
 </image>
