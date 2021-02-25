@@ -104,14 +104,3 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 #flatpak install -y -vv --noninteractive flathub com.valvesoftware.Steam
 #flatpak install -y -vv --noninteractive flathub org.telegram.desktop
 #flatpak install -y -vv --noninteractive flathub com.spotify.Client
-
-#BreezeBlurred
-git clone https://github.com/alex47/BreezeBlurred
-cd BreezeBlurred
-mkdir build
-cd build
-cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release -DKDE_INSTALL_LIBDIR=lib -DBUILD_TESTING=OFF -DKDE_INSTALL_USE_QT_SYS_PATHS=ON
-sudo make install
-cd ..
-cd ..
-rm -rf BreezeBlurred
