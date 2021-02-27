@@ -50,31 +50,23 @@ rm -rf /usr/share/doc/manual/*
 #--------------------------------------
 # enable and disable services
 
-for i in NetworkManager tlp tlp-sleep avahi-dnsconfd; do
+for i in NetworkManager tlp tlp-sleep avahi-dnsconfd live_autologin; do
 	systemctl -f enable $i
 done
 
-for i in purge-kernels wicked auditd apparmor; do
+for i in purge-kernels wicked auditd apparmor sddm; do
 	systemctl -f disable $i
 done
 
-# Import RPM repo keys
-rpm --import /etc/zypp/repos.d/key-Google.pub
-rpm --import /etc/zypp/repos.d/key-Packman.pub
-rpm --import /etc/zypp/repos.d/key-Skype.pub
-rpm --import /etc/zypp/repos.d/key-openSUSE.pub
-rpm --import /etc/zypp/repos.d/key-Nvidia.pub
-rpm --import /etc/zypp/repos.d/key-Tarbetu.pub
-rpm --import /etc/zypp/repos.d/key-Vivaldi.pub
-rpm --import /etc/zypper/repos.d/key-Brave.asc
-rm /etc/zypp/repos.d/key-Google.pub
-rm /etc/zypp/repos.d/key-Packman.pub
-rm /etc/zypp/repos.d/key-Skype.pub
-rm /etc/zypp/repos.d/key-openSUSE.pub
-rm /etc/zypp/repos.d/key-Nvidia.pub
-rm /etc/zypp/repos.d/key-Tarbetu.pub
-rm /etc/zypp/repos.d/key-Vivaldi.pub
-rm /etc/zypper/repos.d/key-Brave.asc
+#Keys
+REPODIR="/etc/zypp/repos.d"
+KEYS="key-Google.pub key-Packman.pub key-Skype.pub key-openSUSE.pub key-Nvidia.pub key-Tarbetu.pub key-Vivaldi.pub key-Brave.asc"
+
+for i in $KEYS; do 
+    THE_FILE=$REPODIR/$i
+    rpm --import $THE_FILE
+    rm $THE_FILE
+done
 
 rm -rf /var/cache/zypp/raw/*
 
@@ -85,7 +77,11 @@ rm -rf /var/cache/zypp/raw/*
 sed -i -e "s/ALL ALL=(ALL) ALL/ALL ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers 
 chmod 0440 /etc/sudoers
 
-/usr/sbin/useradd -m -u 999 lilyum -c "lilyum" -p ""
+/usr/sbin/useradd -m -u 999 lilyum -c "lilyum" -p "" -s /usr/bin/fish
+
+# fish shell for root 
+chsh -s /usr/bin/fish
+
 
 # delete passwords
 passwd -d root
@@ -96,7 +92,6 @@ pam-config -a --nullok
 : > /var/log/zypper.log
 
 chown -R lilyum:users /home/lilyum
-rm -R /etc/skel/bin
 echo "Storage=volatile" >> /etc/systemd/journald.conf
 
 #Flatpak
@@ -104,3 +99,16 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 #flatpak install -y -vv --noninteractive flathub com.valvesoftware.Steam
 #flatpak install -y -vv --noninteractive flathub org.telegram.desktop
 #flatpak install -y -vv --noninteractive flathub com.spotify.Client
+
+#BreezeBlurred
+git clone https://github.com/alex47/BreezeBlurred
+cd BreezeBlurred
+mkdir build
+cd build
+cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release -DKDE_INSTALL_LIBDIR=lib -DBUILD_TESTING=OFF -DKDE_INSTALL_USE_QT_SYS_PATHS=ON
+sudo make install
+cd ..
+cd ..
+rm -rf BreezeBlurred
+
+echo "blacklist pcspkr" | sudo tee /etc/modprobe.d/beep.conf

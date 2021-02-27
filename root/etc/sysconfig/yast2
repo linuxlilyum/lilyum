@@ -32,7 +32,7 @@ WANTED_GUI="auto"
 # inverted: black-white
 # highcontrast: lightgrey-black
 # braille: for visually impaired
-Y2NCURSES_COLOR_THEME="mono"
+Y2NCURSES_COLOR_THEME="highcontrast"
 
 ## Type: list(yes,no)
 ## Default: "no"
@@ -83,13 +83,5 @@ PKGMGR_AUTO_CHECK="yes"
 # all already installed packages).
 PKGMGR_VERIFY_SYSTEM="no"
 
-## Type: list(yes,no)
-## Default: "yes"
-#
-# Install also the weak, recommended, dependencies.
 PKGMGR_RECOMMENDED="yes"
 
-## Type: list(yes,no)
-## Default: "no"
-# Enable use of snapper for YaST.
-USE_SNAPPER="no"

@@ -9,7 +9,7 @@
           </specification>
       </description>
       <preferences>
-          <type image="iso" primary="true" flags="overlay" squashfscompression="zstd" hybrid="true" firmware="uefi" kernelcmdline="quiet" hybridpersistent_filesystem="ext4" hybridpersistent="true" mediacheck="true"/>
+          <type image="iso" primary="true" flags="overlay" squashfscompression="zstd" hybrid="true" firmware="uefi" kernelcmdline="quiet" hybridpersistent_filesystem="xfs" hybridpersistent="true" mediacheck="true"/>
           <version>0.55</version>
           <packagemanager>zypper</packagemanager>
           <locale>tr_TR</locale>
@@ -105,14 +105,13 @@
 			<package name='flat-remix-icon-theme'/>
 			<package name='sddm'/>
 			<package name='yakuake'/>
-			<package name='MozillaFirefox'/>
+			<package name='chromium'/>
 			<package name='MozillaThunderbird'/>
-			<package name='lollypop'/>
-			<package name='celluloid'/>
-			<package name='eog'/>
-			<package name='gimp'/>
-			<package name='eog-plugins'/>
-			<package name='transmission'/>
+			<package name='elisa'/>
+			<package name='kaffeine'/>
+			<package name='krita'/>
+			<package name='gwenview5'/>
+			<package name='kget'/>
 			<package name='fish'/>
 			<package name='checkmedia'/>
 			<package name='patterns-openSUSE-base'/>
