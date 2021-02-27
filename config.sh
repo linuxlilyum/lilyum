@@ -39,7 +39,7 @@ suseInsertService sshd
 #======================================
 # Setup default target, multi-user
 #--------------------------------------
-baseSetRunlevel 5
+baseSetRunlevel 3
 
 #==========================================
 # Remove package docs
