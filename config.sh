@@ -37,9 +37,9 @@ suseSetupProduct
 suseInsertService sshd
 
 #======================================
-# Setup default target, multi-user
+# Setting the Graphical Target 
 #--------------------------------------
-baseSetRunlevel 3
+baseSetRunlevel 5
 
 #==========================================
 # Remove package docs
@@ -50,7 +50,7 @@ rm -rf /usr/share/doc/manual/*
 #--------------------------------------
 # enable and disable services
 
-for i in NetworkManager tlp tlp-sleep avahi-dnsconfd live_autologin; do
+for i in NetworkManager tlp tlp-sleep avahi-dnsconfd; do
 	systemctl -f enable $i
 done
 

@@ -241,7 +241,7 @@
 			<package name='xf86-input-joystick'/>
 			<package name='gutenprint'/>
 			<package name='epson-inkjet-printer-escpr'/>
-			<package name='hplip'/>
+                        <package name='neovim'/>
 			<package name='cups-pk-helper'/>
 			<package name='cups-filters'/>
 			<package name='manufacturer-PPDs'/>

@@ -1,8 +1,0 @@
-[unit]
-Description="Starting Xorg for Live Media"
-[Service]
-User=lilyum
-Execstart=startx .xinitrc
-[Install]
-WantedBy=multi-user.target
-
