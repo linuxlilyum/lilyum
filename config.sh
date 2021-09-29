@@ -50,13 +50,15 @@ rm -rf /usr/share/doc/manual/*
 #--------------------------------------
 # enable and disable services
 
-for i in NetworkManager tlp tlp-sleep avahi-dnsconfd; do
+for i in NetworkManager sddm; do
 	systemctl -f enable $i
 done
 
-for i in purge-kernels wicked auditd apparmor sddm; do
-	systemctl -f disable $i
-done
+# for i in purge-kernels; do
+# 	systemctl -f disable $i
+# done
+
+systemctl -f disable purge-kernels
 
 #Keys
 REPODIR="/etc/zypp/repos.d"
@@ -93,22 +95,3 @@ pam-config -a --nullok
 
 chown -R lilyum:users /home/lilyum
 echo "Storage=volatile" >> /etc/systemd/journald.conf
-
-#Flatpak
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-#flatpak install -y -vv --noninteractive flathub com.valvesoftware.Steam
-#flatpak install -y -vv --noninteractive flathub org.telegram.desktop
-#flatpak install -y -vv --noninteractive flathub com.spotify.Client
-
-#BreezeBlurred
-git clone https://github.com/alex47/BreezeBlurred
-cd BreezeBlurred
-mkdir build
-cd build
-cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release -DKDE_INSTALL_LIBDIR=lib -DBUILD_TESTING=OFF -DKDE_INSTALL_USE_QT_SYS_PATHS=ON
-sudo make install
-cd ..
-cd ..
-rm -rf BreezeBlurred
-
-echo "blacklist pcspkr" | sudo tee /etc/modprobe.d/beep.conf
